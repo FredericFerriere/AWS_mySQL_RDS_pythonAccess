@@ -53,7 +53,7 @@ This allows the EC2 instance to communicate via TCP with the database server.
 ### Connecting to the DB instance via our EC2 instance
 
 * Database/Connect to Database
-* We'll use Standard TCP/IP over SSH as the connection method. This allows Workbench to connect to the DB server via our public instance
+* We'll use Standard TCP/IP over SSH as the connection method. This allows Workbench to connect to the DB server via our public instance. This connection requires a path to the key file you associated to your EC2 instance. Make sure you run CHMOD 400 keyFileName.pem on the file so that Workbench can connect without any issue.
 
 
 ![](workbench_rdsConnection2.png)
