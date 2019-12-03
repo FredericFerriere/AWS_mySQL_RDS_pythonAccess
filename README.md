@@ -1,5 +1,5 @@
 # AWS mySQL RDS pythonAccess  
-## steps to setup and access data in RDS instance from python scripts located on an EC2 instance  
+Steps to setup and access data in RDS instance from python scripts located on an EC2 instance  
 
 In this AWS project, we will create a database located on a RDS instance only accessible from an EC2 instance. We will then run Python scripts from the EC2 instance to:
  * add data to the database
@@ -43,8 +43,10 @@ you will need mySQL Workbench in order to act as administrator on your remote da
  | Additional connectivity configuration: VPC security group | create new: rds_SG |
  | db authentication | password authentication |
 
-Whilst the DB instance is being created, select the VPC security group rds_vpc you just created and make the following changes:
-Inbound: All TCP source   Source: privIP/32 (where privIP is the private IP of the EC2 instance you created in EC2 Services step). This allows the EC2 instance to communicate via TCP with the database server.
+Whilst the DB instance is being created, select the VPC security group rds_vpc you just created and make the following changes:  
+Inbound: All TCP source  
+Source: privIP/32 (where privIP is the private IP of the EC2 instance you created in EC2 Services step).  
+This allows the EC2 instance to communicate via TCP with the database server.
 
 ## Step 2: in mySQL Workbench
 
@@ -118,7 +120,7 @@ $ pip install mysql-connector-python --user
 * Navigate to the directory where the python files db_addData.py and db_getData.py are located.
 
 * To add data to the table:  
-$ python db_addData.py John Smith
+$ python db_addData.py John Smith  
 $ python db_addData.py Fred Ferriere
 
 * To print the content of the table:  
